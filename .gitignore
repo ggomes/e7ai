@@ -1,0 +1,6 @@
+__pycache__
+*.pyc
+*.pdf
+_*.txt
+*.odp
+*.xopp
