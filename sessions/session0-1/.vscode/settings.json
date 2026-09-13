@@ -1,0 +1,6 @@
+{
+  "workbench.startupEditor": "none",
+  "jupyter.askForKernelRestart": false,
+  "jupyter.notebookFileRoot": "${workspaceFolder}",
+  "python.terminal.activateEnvironment": true
+}

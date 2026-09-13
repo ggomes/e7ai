@@ -26,15 +26,33 @@ By the end of this exercise, you should be able to:
 
 ## Setup
 
-Open this folder in VS Code. The repository includes Copilot instructions and
-an activity tutor prompt in `.github/`. If Copilot Chat is not already open,
-open it from the VS Code activity bar and use the prompt in the notebook or
-invoke `.github/prompts/session0-1-tutor.prompt.md`.
+Open the `sessions/session0-1` folder itself as the VS Code workspace. Keeping
+this activity as the workspace root gives Copilot a small, unambiguous project
+and avoids discovery of unrelated activities. The folder includes Copilot
+instructions and an activity tutor prompt in `.github/`.
 
-Start by sending Copilot Chat:
+If the JupyterHub image has not already provisioned the dependencies, an
+instructor or startup hook can run this from this folder:
 
-> Please run the simulator with the default controller and show me the output.
-> Also, explain to me in plain English what the controller is doing.
+```bash
+bash setup_environment.sh
+```
+
+This installs the packages in `requirements.txt` into the selected Python
+environment and registers a `Python (E7AI session0-1)` notebook kernel. The
+course JupyterHub image should preferably preinstall these packages so students
+do not need to wait for an installation.
+
+If Copilot Chat is not already open, open it from the VS Code activity bar and
+use the prompt in the notebook or invoke
+`.github/prompts/session0-1-tutor.prompt.md`.
+
+Start by sending Copilot Chat. Copilot is already in the activity folder, so it
+should run the command directly rather than searching the repository:
+
+> You are already in the `session0-1` folder. Please run
+> `python student_controller.py` with the default controller and show me the
+> output. Also, explain to me in plain English what the controller is doing.
 
 The starter runs, but its initial policy is deliberately incomplete; use the
 output and explanation to identify what still needs to be specified.
