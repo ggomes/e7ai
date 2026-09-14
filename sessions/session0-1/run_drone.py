@@ -62,7 +62,7 @@ else:
     print("FAIL: the drone did converge in time.")
 
 # plot .....................................
-fig, axs = plt.subplots(nrows=2)
+fig, axs = plt.subplots(nrows=2,sharex=True)
 
 ax = axs[0]
 ax.plot(t, h, linewidth=2,label="drone height")
@@ -94,6 +94,7 @@ ax.axvline(
 ax.set_xlabel("Time")
 ax.set_ylabel("Height (m)")
 ax.set_xlim(0,T)
+ax.grid()
 
 ax.legend(fontsize=12)
 ax = axs[1]
@@ -101,6 +102,7 @@ ax.plot(t, tau_c)
 ax.set_xlabel("time [s]",fontsize=12)
 ax.set_ylabel("Thrust",fontsize=12)
 ax.set_xlim(0,T)
+ax.grid()
 
 
 
